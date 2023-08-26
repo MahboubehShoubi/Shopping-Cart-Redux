@@ -6,6 +6,7 @@ import {fetchProducts} from "../redux/products/productsAction";
 
 //Components
 import Product from "./share/Product";
+import Loader from "./share/Loader";
 
 const Store = () => {
     const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const Store = () => {
         <div>
             {
                 productsState.loading ?
-                    <h1>Loading ....</h1>:
+                    <Loader />:
                     productsState.error ?
                         <p>{productsState.error}</p>:
                         productsState.products.map(product => <Product key={product.id} productData={product} />)

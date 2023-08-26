@@ -1,0 +1,56 @@
+.mainContainer{
+    width: 100%;
+    background-color: var(--black-1);
+    position: fixed;
+    top: 0;
+    margin: 0 0 200px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 15px 150px;
+}
+
+.productsLink{
+    color: var(--orange);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.shoppingIcons{
+    position: relative;
+}
+
+.itemsCounter{
+    color: var(--orange);
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    padding:2px 7px;
+    background-color: var(--gray-3);
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 555px) {
+    .container {
+        padding: 15px 20px;
+    }
+}
+
