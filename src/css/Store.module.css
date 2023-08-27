@@ -3,12 +3,25 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
     padding: 100px 50px;
+    row-gap: 30px;
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     .container{
-        padding: 50px 20px;
+        padding: 100px 40px;
+    }
+}
+
+@media screen and (min-width: 556px) and (max-width: 768px) {
+    .container {
+        padding: 100px 30px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .container {
+        padding: 100px 20px;
+        justify-content: center;
     }
 }

@@ -1,0 +1,97 @@
+.container{
+    width: 21%;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    border: 1px solid var(--background-white-gray);
+    box-shadow: 5px 5px 60px 5px #d3d3d3;
+}
+
+.containerImg{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImg img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.containerInfo{
+    height: 200px;
+}
+
+.productTitle{
+    font-size: 22px;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.productLink{
+    text-decoration: none;
+}
+
+.controlBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.controlBox button{
+    display: inline-block;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+}
+.removeItem , .decrease , .increase{
+    width: 40px;
+    font-size: 30px;
+}
+.removeItem img{
+    width: 25px;
+    height: 25px;
+}
+
+.addItem{
+    width: 100%;
+    font-size: 18px;
+}
+
+.quantityCount{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        width: 27%;
+    }
+}
+
+@media screen and (min-width: 556px) and (max-width: 768px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .container {
+        width: 80%;
+    }
+}
