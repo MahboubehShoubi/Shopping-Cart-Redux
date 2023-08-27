@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 100px 50px;
+}
+
+@media (max-width: 480px) {
+    .container{
+        padding: 50px 20px;
+    }
+}

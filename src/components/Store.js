@@ -8,6 +8,9 @@ import {fetchProducts} from "../redux/products/productsAction";
 import Product from "./share/Product";
 import Loader from "./share/Loader";
 
+//css
+import styles from "../css/Store.module.css";
+
 const Store = () => {
     const dispatch = useDispatch();
     const productsState = useSelector(state => state.productsState);
@@ -17,8 +20,10 @@ const Store = () => {
             dispatch(fetchProducts())
         }
     } , [])
+
+
     return (
-        <div>
+        <div className={styles.container}>
             {
                 productsState.loading ?
                     <Loader />:
