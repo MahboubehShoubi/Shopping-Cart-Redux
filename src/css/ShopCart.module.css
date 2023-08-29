@@ -1,0 +1,99 @@
+.container{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.cartContainer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.cartContainer a{
+    color: black;
+    transition: all 500ms;
+    width: fit-content;
+}
+
+.cartContainer a:hover{
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.payments , .complete{
+    width: 20%;
+    box-shadow: 5px 5px 20px 5px #d9d9d9;
+    padding: 10px 20px 20px;
+    margin-top: 50px;
+}
+
+.payments p span{
+    font-weight: bold;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.buttonContainer button{
+    width: 45%;
+    background-color: var(--orange);
+    border-radius: 5px;
+    border: 1px solid var(--orange);
+    cursor: pointer;
+    padding: 8px;
+    font-size: 16px;
+    transition: all 500ms;
+
+}
+
+.buttonContainer button:hover{
+    background-color: inherit;
+    color: var(--orange);
+}
+
+.complete a{
+    transition: all 500ms;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.complete a:hover{
+    color: black;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 555px) {
+    .container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        margin-top: 50px;
+        padding: 20px 30px;
+    }
+
+    .cartContainer{
+        width: 100%;
+    }
+
+    .payments , .complete{
+        width: 100%;
+    }
+}
+

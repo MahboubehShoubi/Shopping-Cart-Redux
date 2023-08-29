@@ -59,6 +59,10 @@
     height: 40px;
     cursor: pointer;
 }
+
+.controlBox button:hover{
+    background-color: orange;
+}
 .removeItem , .decrease , .increase{
     width: 40px;
     font-size: 30px;

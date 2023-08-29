@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className={styles.container}>
                 <Link className={styles.productsLink} to='/products'>Products</Link>
                 <div className={styles.shoppingIcons}>
-                    <Link><img src={shopIcon} alt="shopIcons"/></Link>
+                    <Link to='/cart'><img src={shopIcon} alt="shopIcons"/></Link>
                     {
                         state.itemsCounter > 0 && <span className={styles.itemsCounter}>{state.itemsCounter}</span>
                     }
