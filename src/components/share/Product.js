@@ -22,14 +22,16 @@ const Product = ({productData}) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.containerImg}>
-                <img src={productData.image} alt="product" />
-            </div>
+            <Link to={`/products/${productData.id}`} >
+                <div className={styles.containerImg}>
+                    <img src={productData.image} alt="product" />
+                </div>
+            </Link>
+
             <div className={styles.containerInfo}>
                 <h3 className={styles.productTitle}>{shorten(productData.title)}</h3>
                 <p><span className={styles.price}>Price : </span>{`${productData.price} $`}</p>
                 <div className={styles.control}>
-                    <Link className={styles.productLink} to={`/products/${productData.id}`}>Details</Link>
                     <div className={styles.controlBox}>
                         {quantityCount(state, productData.id) === 1 && <button className={styles.removeItem} onClick={() => dispatch(removeItem(productData))}><img src={trashIcon} alt="trash" /></button>}
                         {quantityCount(state, productData.id) > 1 && <button className={styles.decrease} onClick={() => dispatch(decrease(productData))}>-</button>}

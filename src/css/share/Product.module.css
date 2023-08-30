@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.containerImg img{
+.containerImg  img{
     width:100%;
     height: 100%;
     object-fit: contain;
@@ -34,15 +34,6 @@
     font-weight: bold;
 }
 
-.control{
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-}
-
-.productLink{
-    text-decoration: none;
-}
 
 .controlBox{
     display: flex;
@@ -58,6 +49,7 @@
     border: none;
     height: 40px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .controlBox button:hover{

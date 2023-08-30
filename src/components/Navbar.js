@@ -15,10 +15,12 @@ const Navbar = () => {
             <div className={styles.container}>
                 <Link className={styles.productsLink} to='/products'>Products</Link>
                 <div className={styles.shoppingIcons}>
-                    <Link to='/cart'><img src={shopIcon} alt="shopIcons"/></Link>
-                    {
-                        state.itemsCounter > 0 && <span className={styles.itemsCounter}>{state.itemsCounter}</span>
-                    }
+                    <Link to='/cart'>
+                        <img src={shopIcon} alt="shopIcons"/>
+                        {
+                            state.itemsCounter > 0 && <span className={styles.itemsCounter}>{state.itemsCounter}</span>
+                        }
+                    </Link>
                 </div>
             </div>
         </div>

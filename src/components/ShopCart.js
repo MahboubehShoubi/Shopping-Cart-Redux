@@ -18,7 +18,7 @@ const ShopCart = () => {
     return (
         <div className={styles.container}>
             <div className={styles.cartContainer}>
-                {state.itemsCounter > 0 && <Link to='/products'>Back to Shop</Link>}
+                {state.itemsCounter > 0 && <Link className={styles.productLink} to='/products'>Go to Shop</Link>}
                 {state.selectedItems.map(item => <Cart key={item.id} data={item} />)}
             </div>
 

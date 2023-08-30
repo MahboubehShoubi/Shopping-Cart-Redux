@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import { useDispatch} from "react-redux";
 
 // Functions
@@ -17,26 +18,32 @@ import {decrease, removeItem , increase} from "../../redux/cart/cartAction";
 const Cart = (props) => {
 
     const dispatch = useDispatch();
-    const {image, title, price, quantity} = props.data;
+    const {image, title, price, quantity,id} = props.data;
 
     return (
         <div className={styles.container} >
-            <img className={styles.productImage} src={image} />
-            <div className={styles.data}>
+            <Link to={`/products/${id}`} >
+                <div className={styles.productImage}>
+                    <img  src={image} />
+                </div>
+            </Link>
+
+            <div className={styles.dataBox}>
                 <h3>{shorten(title)}</h3>
-                <p><span>price :</span> {price} $</p>
+                <div className={styles.data}>
+                    <p><span>price :</span> {price} $</p>
+                </div>
+                <div className={styles.buttonContainer}>
+                    {
+                        quantity > 1 ?
+                            <button onClick={() => dispatch(decrease(props.data))} >-</button> :
+                            <button onClick={() => dispatch(removeItem(props.data))} ><img src={trashIcon} alt="trash" /></button>
+                    }
+                    <span className={styles.quantity}>{quantity}</span>
+                    <button onClick={() => dispatch(increase(props.data))} >+</button>
+                </div>
             </div>
-            <div>
-                <span className={styles.quantity}>{quantity}</span>
-            </div>
-            <div className={styles.buttonContainer}>
-                {
-                    quantity > 1 ?
-                        <button onClick={() => dispatch(decrease(props.data))} >-</button> :
-                        <button onClick={() => dispatch(removeItem(props.data))} ><img src={trashIcon} alt="trash" /></button>
-                }
-                <button onClick={() => dispatch(increase(props.data))} >+</button>
-            </div>
+
         </div>
     );
 };

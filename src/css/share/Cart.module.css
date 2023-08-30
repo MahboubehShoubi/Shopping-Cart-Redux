@@ -1,25 +1,35 @@
 .container{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
     padding: 20px;
     box-shadow: 5px 5px 20px 5px #d9d9d9;
 }
-
 .productImage{
+    width: 20%;
+    text-align: center;
+}
+.productImage img{
     width: 100px;
+}
+
+.dataBox{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .data{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 30%;
 }
 
-.data h3{
+.dataBox h3{
     font-size: 20px;
 }
 
@@ -33,9 +43,9 @@
 
 .buttonContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 7%;
+    width: 20%;
 }
 
 .buttonContainer button{
@@ -59,4 +69,54 @@
 
 .buttonContainer button:hover{
     background-color: orange;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 555px) {
+    .dataBox{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .data{
+        width: 60%;
+    }
+
+    .buttonContainer{
+        width: 30%;
+    }
+
+    .buttonContainer button{
+        width: 32px;
+        height: 32px;
+        background-color: var(--orange);
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 500ms;
+    }
+
+    .buttonContainer img{
+        width: 20px;
+    }
+
+    .buttonContainer button:hover{
+        background-color: orange;
+    }
+
 }
